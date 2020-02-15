@@ -3,7 +3,8 @@ var logElem = exports.logElem = document.querySelector('.log')
 var logHeading = document.querySelector('#logHeading')
 var speed = document.querySelector('.speed')
 
-exports.log = function log (item, unsafe) {
+exports.log =
+    function log(item, unsafe) {
   logHeading.style.display = 'block'
 
   var p = document.createElement('p')
@@ -13,11 +14,11 @@ exports.log = function log (item, unsafe) {
   return p
 }
 
-exports.unsafeLog = function unsafeLog (item) {
-  return exports.log(item, true)
-}
+    exports.unsafeLog = function unsafeLog(
+                            item) { return exports.log(item, true) }
 
-exports.appendElemToLog = function append (item) {
+                        exports.appendElemToLog =
+        function append(item) {
   logHeading.style.display = 'block'
 
   logElem.appendChild(item)
@@ -25,21 +26,21 @@ exports.appendElemToLog = function append (item) {
   return item
 }
 
-exports.lineBreak = function lineBreak () {
-  logElem.appendChild(document.createElement('br'))
-}
+        exports.lineBreak =
+            function
+            lineBreak() { logElem.appendChild(document.createElement('br')) }
 
-// replace the last P in the log
-exports.updateSpeed = function updateSpeed (str) {
-  speed.innerHTML = str
-}
+            // replace the last P in the log
+            exports.updateSpeed = function updateSpeed(
+                                      str) { speed.innerHTML = str }
 
-exports.warning = function warning (err) {
+                                  exports.warning =
+                function warning(err) {
   console.error(err.stack || err.message || err)
   return exports.log(escapeHtml(err.message || err))
 }
 
-exports.error = function error (err) {
+                exports.error = function error(err) {
   console.error(err.stack || err.message || err)
   var p = exports.log(escapeHtml(err.message || err))
   p.style.color = 'red'
