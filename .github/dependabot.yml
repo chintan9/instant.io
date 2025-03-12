@@ -1,0 +1,61 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "09:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: date-fns
+    versions:
+    - 2.17.0
+    - 2.18.0
+    - 2.19.0
+    - 2.20.0
+    - 2.20.1
+    - 2.20.2
+    - 2.20.3
+  - dependency-name: webtorrent
+    versions:
+    - 0.112.2
+    - 0.113.0
+    - 0.114.0
+    - 0.114.1
+    - 0.115.0
+    - 0.115.1
+    - 0.115.2
+    - 0.115.3
+    - 0.115.4
+    - 0.116.0
+    - 0.116.1
+    - 0.116.2
+    - 0.117.0
+  - dependency-name: create-torrent
+    versions:
+    - 4.4.3
+    - 4.4.4
+    - 4.4.5
+    - 4.5.0
+    - 4.6.0
+  - dependency-name: husky
+    versions:
+    - 5.0.9
+    - 5.1.0
+    - 5.1.1
+    - 5.1.2
+    - 5.1.3
+    - 5.2.0
+  - dependency-name: simple-peer
+    versions:
+    - 9.10.0
+  - dependency-name: drag-drop
+    versions:
+    - 7.0.0
+  - dependency-name: rollbar
+    versions:
+    - 2.20.0
+    - 2.21.0
+  - dependency-name: standard
+    versions:
+    - 16.0.3
